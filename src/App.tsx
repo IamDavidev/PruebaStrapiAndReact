@@ -1,0 +1,14 @@
+import { useState } from 'react'
+
+function App() {
+  const [count, setCount] = useState(0)
+  return (
+    <div className="App">
+      <h1>
+        welcome to <strong>blog</strong>
+      </h1>
+    </div>
+  )
+}
+
+export default App
