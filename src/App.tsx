@@ -1,14 +1,24 @@
-import { useState } from 'react'
+import { useState } from 'react';
+import { Routes, Route, Link } from 'react-router-dom';
+import Navbar from './components/NavBar';
+import { AppContainer } from './mainStyled';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
   return (
-    <div className="App">
+    <>
+      <Navbar />
       <h1>
         welcome to <strong>blog</strong>
       </h1>
-    </div>
-  )
+
+      {/* routes */}
+
+      <Routes>
+        <Route></Route>
+      </Routes>
+    </>
+  );
 }
 
-export default App
+export default App;
