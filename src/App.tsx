@@ -4,7 +4,7 @@ import Navbar from './components/NavBar';
 import About from './pages/About';
 import Dblog from './pages/Dblog';
 import Search from './pages/Search';
-import { client } from './Query/ApolloError';
+import { client } from './services/ApolloError';
 function App() {
   return (
     <ApolloProvider client={client}>

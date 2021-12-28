@@ -1,5 +1,7 @@
+import { useEffect } from 'react';
 import styled from 'styled-components';
 import { AppTheme } from '../mainStyled';
+import { ListPost } from '../services/Query';
 
 const Sdblog = styled.article`
   background: ${AppTheme.colors.first};
@@ -8,7 +10,11 @@ const Sdblog = styled.article`
 
 const Dblog = () => {
   console.log('Dblog');
-  console.log(process.env.DBLOG_API_URL);
+ 
+  useEffect(() => {
+    ListPost()
+  }, [])
+ 
   return (
     <Sdblog>
       <h1>Dblog render</h1>
