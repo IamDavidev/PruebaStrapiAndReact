@@ -1,23 +1,23 @@
-import { useState } from 'react';
-import { Routes, Route, Link } from 'react-router-dom';
+import { ApolloProvider } from '@apollo/client';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import Navbar from './components/NavBar';
-import { AppContainer } from './mainStyled';
-
+import About from './pages/About';
+import Dblog from './pages/Dblog';
+import Search from './pages/Search';
+import { client } from './Query/ApolloError';
 function App() {
-  const [count, setCount] = useState(0);
   return (
-    <>
+    <ApolloProvider client={client}>
       <Navbar />
-      <h1>
-        welcome to <strong>blog</strong>
-      </h1>
-
-      {/* routes */}
-
-      <Routes>
-        <Route></Route>
-      </Routes>
-    </>
+      <main>
+        <Routes>
+          <Route path="/" element={<Navigate replace to="/dblog" />} />
+          <Route path="/dblog" element={<Dblog />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/search" element={<Search />} />
+        </Routes>
+      </main>
+    </ApolloProvider>
   );
 }
 

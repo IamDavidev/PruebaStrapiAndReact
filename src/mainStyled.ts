@@ -18,21 +18,21 @@ export const AppStyled = createGlobalStyle`
 
 export const AppTheme = {
   colors: {
-    first: '#41729F',
-    second: '#5885AF',
-    third: '#274472',
-    fourth: '#A4E8E0',
+    first: '#041C32',
+    second: '#04293A',
+    third: '#064663',
+    fourth: '#B1D4E0',
     text: '#00ADB5',
     ext: '#222831',
   },
-  font:{
-    title:'3rem',
-    subtitle:'1.5rem',
-    text:'1rem'
-  }
+  font: {
+    title: '3rem',
+    subtitle: '1.5rem',
+    text: '1rem',
+  },
 };
 
-export const AppContainer = styled.main`
+export const AppContainer = styled.section`
   background: ${AppTheme.colors.fourth};
   display: flex;
   flex-direction: column;
@@ -44,4 +44,11 @@ export const AppContainer = styled.main`
   font-size: calc(10px + 2vmin);
   margin: 0;
   padding: 0;
+  main {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    color:#fff;
+  }
 `;
