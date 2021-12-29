@@ -1,7 +1,8 @@
 import { useEffect } from 'react';
 import styled from 'styled-components';
+import GetPots from '../components/GetPots';
+import Query from '../components/Query';
 import { AppTheme } from '../mainStyled';
-import { ListPost } from '../services/Query';
 
 const Sdblog = styled.article`
   background: ${AppTheme.colors.first};
@@ -10,14 +11,10 @@ const Sdblog = styled.article`
 
 const Dblog = () => {
   console.log('Dblog');
- 
-  useEffect(() => {
-    ListPost()
-  }, [])
- 
   return (
     <Sdblog>
       <h1>Dblog render</h1>
+      <GetPots />
     </Sdblog>
   );
 };
